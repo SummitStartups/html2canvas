@@ -20,9 +20,9 @@ export default class Length {
         this.type =
             value.substr(value.length - 1) === '%' ? LENGTH_TYPE.PERCENTAGE : LENGTH_TYPE.PX;
         const parsedValue = parseFloat(value);
-        if (__DEV__ && isNaN(parsedValue)) {
+     /*   if (__DEV__ && isNaN(parsedValue)) {
             console.error(`Invalid value given for Length: "${value}"`);
-        }
+        }*/
         this.value = isNaN(parsedValue) ? 0 : parsedValue;
     }
 
